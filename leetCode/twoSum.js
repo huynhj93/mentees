@@ -1,1 +1,4 @@
-//Place your JS here.
+
+function twoSum(){
+    console.log("string");
+}
