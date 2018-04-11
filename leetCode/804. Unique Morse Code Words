@@ -1,0 +1,20 @@
+// https://leetcode.com/problems/unique-morse-code-words/description/
+
+// I could probably do this a better way (with hash tables maybe?) but my first attempt
+
+
+var morse = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."];
+
+var uniqueMorseRepresentations = function(words) {
+    var tfArray = [];
+    for (i=0; i<words.length; i++) {
+        var tf = "";
+        for (j=0; j<words[i].length; j++) {
+            tf += morse[words[i].charCodeAt(j) - 97];                
+            } 
+        if (!tfArray.includes(tf)) {
+            tfArray.push(tf);
+            } 
+        } 
+    return tfArray.length;
+};
