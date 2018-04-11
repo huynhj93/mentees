@@ -1,0 +1,11 @@
+// https://leetcode.com/problems/jewels-and-stones/description/
+
+var numJewelsInStones = function(J, S) {
+    var count = 0;
+    for (i=0; i<S.length; i++) {
+        if (J.includes(S[i])) {
+            count += 1;
+        }
+    }
+    return count;
+};
